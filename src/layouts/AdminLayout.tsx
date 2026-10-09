@@ -20,6 +20,7 @@ export function AdminLayout() {
           <div className="nav-section-title">Inventory</div>
           <NavLink to="/admin/inventory/items" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}><span className="nav-icon">▦</span>Items</NavLink>
           <NavLink to="/admin/inventory/history" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}><span className="nav-icon">↺</span>Stock History</NavLink>
+          <NavLink to="/admin/inventory/report" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}><span className="nav-icon">▤</span>Inventory Report</NavLink>
           <NavLink to="/admin/testing" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}><span className="nav-icon">⚙</span>Testing Utilities</NavLink>
         </nav>
         <div className="sidebar-footer"><div className="local-status"><span className="status-dot" />Local database active</div><span className="sidebar-version">Foundation · Context 1</span></div>

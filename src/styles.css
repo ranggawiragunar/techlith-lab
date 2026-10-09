@@ -74,3 +74,24 @@ tbody td{font-size:13px;line-height:1.4;padding-top:9px;padding-bottom:9px}
   .logout-button{font-size:12px}
   .page-heading>.button{font-size:12px}
 }
+
+.report-summary{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;margin-bottom:20px}
+.report-summary-card{min-height:118px}
+.inventory-report-card{overflow:hidden}
+.inventory-report-card .table-wrap{overflow-x:auto}
+.inventory-report-table{min-width:1040px}
+.inventory-report-table thead th,.inventory-report-table tbody td{padding-left:10px;padding-right:10px}
+.inventory-report-table tbody td{white-space:nowrap}
+.report-code-link{color:#5559d9;font-weight:700}
+.report-name-link{color:#30374a;font-weight:700}
+.report-code-link:hover,.report-name-link:hover{color:#3438a9;text-decoration:underline}
+.report-note{margin:0;padding:13px 18px;border-top:1px solid #eff0f4;color:#858c9b;font-size:10px;line-height:1.5}
+.report-state-card{padding:22px;margin-bottom:20px}
+.report-state-card h2{margin:0 0 6px;font:700 14px Manrope,sans-serif}
+.report-state-card p{margin:0 0 16px;color:#838b9b;font-size:11px}
+.report-empty-state .text-link{display:inline-block;margin-top:8px}
+
+@media(max-width:680px){
+  .report-summary{grid-template-columns:1fr;gap:10px}
+  .report-summary-card{min-height:105px}
+}

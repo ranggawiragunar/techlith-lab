@@ -7,6 +7,7 @@ import { ItemsPage } from '../pages/ItemsPage'
 import { ItemDetailPage } from '../pages/ItemDetailPage'
 import { StockHistoryPage } from '../pages/StockHistoryPage'
 import { TestingPage } from '../pages/TestingPage'
+import { InventoryReportPage } from '../pages/InventoryReportPage'
 
 export function App() {
   return (
@@ -21,6 +22,7 @@ export function App() {
           <Route path="inventory/items" element={<ItemsPage />} />
           <Route path="inventory/items/:itemCode" element={<ItemDetailPage />} />
           <Route path="inventory/history" element={<StockHistoryPage />} />
+          <Route path="inventory/report" element={<InventoryReportPage />} />
           <Route path="testing" element={<TestingPage />} />
         </Route>
       </Route>
