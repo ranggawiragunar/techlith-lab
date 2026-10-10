@@ -21,6 +21,8 @@ export function AdminLayout() {
           <NavLink to="/admin/inventory/items" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}><span className="nav-icon">▦</span>Items</NavLink>
           <NavLink to="/admin/inventory/history" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}><span className="nav-icon">↺</span>Stock History</NavLink>
           <NavLink to="/admin/inventory/report" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}><span className="nav-icon">▤</span>Inventory Report</NavLink>
+          <div className="nav-section-title">Classroom Labs</div>
+          <NavLink to="/admin/classroom/session-3" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}><span className="nav-icon">▣</span>Session 3 — Inventory Testing</NavLink>
           <NavLink to="/admin/testing" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}><span className="nav-icon">⚙</span>Testing Utilities</NavLink>
         </nav>
         <div className="sidebar-footer"><div className="local-status"><span className="status-dot" />Local database active</div><span className="sidebar-version">Foundation · Context 1</span></div>

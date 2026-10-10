@@ -31,3 +31,7 @@ The React application and Vite configuration live at the repository root. Dexie 
 - Stock movements use public transaction codes such as `TRX-STK-0001` and snapshot the item's public code for history.
 - Stock History shows movement details and supports item, type, and text filters. Archived items remain available in history.
 - Testing Utilities can restore the 10-item seed baseline and clear local movements while keeping the admin session.
+
+## Session 3 classroom source
+
+The standalone Create React App project is maintained in `classroom/session-3-source/` and is separate from the root Vite application. After updating its allowlisted student files, run `python3 scripts/package-session-3-source.py` from the repository root to recreate `public/downloads/session-3-inventory-classroom.zip` with stable archive metadata. The script includes only the curated source files.
