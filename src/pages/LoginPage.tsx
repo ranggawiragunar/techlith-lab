@@ -33,7 +33,7 @@ export function LoginPage() {
   return (
     <main className="login-screen">
       <section className="login-card">
-        <div className="login-brand"><div className="brand-mark">T</div><div><strong>Techlith Lab</strong><span>SOFTWARE TESTING LABORATORY</span></div></div>
+        <div className="login-brand"><div className="brand-mark">T</div><div><strong>Techlith Lab</strong><span>INVENTORY MANAGEMENT LABORATORY</span></div></div>
         <div className="login-intro"><div className="eyebrow">ADMIN WORKSPACE</div><h1>Welcome back</h1><p>Sign in to manage your local testing laboratory.</p></div>
         <form onSubmit={handleSubmit} className="login-form">
           <label htmlFor="username">Username</label><input id="username" autoComplete="username" value={username} onChange={(event) => setUsername(event.target.value)} required />
