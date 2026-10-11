@@ -1,4 +1,6 @@
+import { Link } from 'react-router-dom'
 import { verificationValidationCourse, type SessionStatus } from '../courseConfig'
+import { verificationValidationRoutes } from '../routes'
 
 function getSessionStatusLabel(status: SessionStatus) {
   return status === 'available' ? 'Available' : 'Coming later'
@@ -49,7 +51,7 @@ export function VerificationValidationPage() {
                 <span>{session.deliveryModel}</span>
                 <span className="verification-session-status">{getSessionStatusLabel(session.status)}</span>
               </div>
-              <h3>{session.title}</h3>
+              <h3>{session.status === 'available' ? <Link to={verificationValidationRoutes.session1Path}>{session.title}</Link> : session.title}</h3>
             </div>
           </li>
         ))}
