@@ -1,0 +1,6 @@
+Requirement / Risk,Test Case,Evidence Reference,Result,Related Defect,Notes
+REQ-STK-01: inbound > 0,INT-01,,,,
+REQ-STK-03: outbound <= current stock,INT-03 / INT-04,,,,
+REQ-HIS-01: successful stocktaking tercatat,INT-01 / INT-02,,,,
+REQ-HIS-02: prev/amount/next konsisten,INT-01 / INT-02,,,,
+Integration risk: partial write,ERR-01 / ERR-02,,,,

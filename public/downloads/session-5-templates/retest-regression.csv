@@ -1,0 +1,6 @@
+Test Case ID,Flow,Precondition,Action,Expected Result,Actual Result,Status,Evidence,Notes
+RET-01,"Reference Safe Flow","Seed baseline; ITM-001 amount=10","Inbound 5 dengan failure injection Normal","Item=15; stocktaking tersimpan; history reference ada; success saja",,,,
+RET-02,"Reference Safe Flow","Seed baseline; ITM-001 amount=10; stocktakings dan history kosong","Inbound 5 dengan failure injection stocktaking-write","Item=10; tidak ada stocktaking; history kosong; warning saja",,,,
+RET-03,"Reference Safe Flow","Seed baseline; ITM-001 amount=10; stocktakings dan history kosong","Inbound 5 dengan failure injection item-update","Item=10; stocktaking di-rollback; history kosong; warning saja",,,,
+REG-01,"Flow yang diretest","Seed baseline; ITM-001 amount=10","Outbound 10 dengan failure injection Normal","Item=0; stocktaking nextAmount=0; transaksi berhasil",,,,
+REG-02,"Flow yang diretest","Seed baseline; ITM-001 amount=10","Outbound 11 dengan failure injection Normal","Operasi ditolak; item, history, dan stocktakings tidak berubah",,,,

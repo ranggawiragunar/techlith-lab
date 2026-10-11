@@ -1,9 +1,31 @@
-import { NavLink, Outlet, useNavigate } from 'react-router-dom'
+import { useEffect } from 'react'
+import { NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom'
 import { useAuth } from '../features/auth/context'
 
 export function AdminLayout() {
   const { user, signOut } = useAuth()
   const navigate = useNavigate()
+  const location = useLocation()
+
+  useEffect(() => {
+    if (location.pathname !== '/admin/classroom/session-5') return
+
+    function revealActiveMobileLink() {
+      if (!window.matchMedia('(max-width: 680px)').matches) return
+
+      const nav = document.querySelector<HTMLElement>('.side-nav')
+      const activeLink = nav?.querySelector<HTMLElement>('.nav-link.active')
+      if (!nav || !activeLink) return
+
+      const navBounds = nav.getBoundingClientRect()
+      const linkBounds = activeLink.getBoundingClientRect()
+      nav.scrollTo({ left: nav.scrollLeft + linkBounds.left - navBounds.left - 12 })
+    }
+
+    revealActiveMobileLink()
+    window.addEventListener('resize', revealActiveMobileLink)
+    return () => window.removeEventListener('resize', revealActiveMobileLink)
+  }, [location.pathname])
 
   function handleLogout() {
     signOut()
@@ -24,6 +46,7 @@ export function AdminLayout() {
           <div className="nav-section-title">Classroom Labs</div>
           <NavLink to="/admin/classroom/session-3" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}><span className="nav-icon">▣</span>Session 3 — Inventory Testing</NavLink>
           <NavLink to="/admin/classroom/session-4" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}><span className="nav-icon" aria-hidden="true">◎</span>Session 4 — Object-Oriented Testing</NavLink>
+          <NavLink to="/admin/classroom/session-5" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}><span className="nav-icon" aria-hidden="true">⇄</span>Sesi 5 — Integration Testing</NavLink>
           <NavLink to="/admin/testing" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}><span className="nav-icon">⚙</span>Testing Utilities</NavLink>
         </nav>
         <div className="sidebar-footer"><div className="local-status"><span className="status-dot" />Local database active</div><span className="sidebar-version">Foundation · Context 1</span></div>

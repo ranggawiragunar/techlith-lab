@@ -1,0 +1,5 @@
+Test Case ID,Precondition,Action,Expected Result,Actual Result,Status,Evidence Reference,Notes
+INT-01,"ITM-001 amount=10; stocktakings kosong; history kosong","Pilih ITM-001, inbound 5, failure injection Normal, implementation Baseline","Item amount 10 -> 15; history bertambah satu reference; stocktaking prevAmount=10, amount=5, nextAmount=15, type=inbound",,,,
+INT-02,"Hasil INT-01; ITM-001 amount=15","Pilih outbound 3, failure injection Normal, implementation Baseline","Item amount 15 -> 12; history berisi dua reference; stocktaking prevAmount=15, amount=3, nextAmount=12, type=outbound",,,,
+INT-03,"Seed baseline; ITM-001 amount=10; stocktakings dan history kosong","Pilih outbound 10, failure injection Normal, implementation Baseline","Item amount=0; history bertambah satu reference; stocktaking nextAmount=0",,,,
+INT-04,"Seed baseline; ITM-001 amount=10; stocktakings dan history kosong","Pilih outbound 11, failure injection Normal, implementation Baseline","Operasi ditolak; item, history, dan stocktakings tidak berubah",,,,
