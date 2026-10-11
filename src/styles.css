@@ -217,3 +217,136 @@ tbody td{font-size:13px;line-height:1.4;padding-top:9px;padding-bottom:9px}
   .session3-source-card{padding:16px}
   .page-heading>.button{white-space:normal}
 }
+
+.session4-page-heading{margin-bottom:20px}
+.session4-page-heading .eyebrow{color:#697285}
+.session4-page-heading h1{max-width:760px}
+.session4-page-heading .session4-subtitle{margin-top:7px;font-size:13px;line-height:1.55;color:#697285}
+.session4-intro-card{padding:20px;margin-bottom:20px}
+.session4-session-details{display:flex;flex-wrap:wrap;gap:24px;padding-bottom:17px;border-bottom:1px solid #eff0f4}
+.session4-session-details>div{display:grid;gap:5px}
+.session4-session-details span{font-size:10px;color:#697285}
+.session4-session-details strong{font-size:12px;color:#38415a}
+.session4-intro-copy{padding-top:17px}
+.session4-intro-copy h2,.session4-topics-heading h2{margin:0 0 7px;font:700 15px Manrope,sans-serif;color:#30374a}
+.session4-intro-copy p,.session4-topics-heading p{margin:0;color:#697285;font-size:12px;line-height:1.65}
+.session4-intro-copy .session4-answer-warning{margin-top:8px;color:#38415a;font-weight:600}
+.session4-topics-heading{margin-bottom:12px}
+.session4-topic-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:0;padding:0;list-style:none;counter-reset:session4-topic}
+.session4-topic-list li{min-width:0;min-height:66px;display:flex;align-items:center;gap:12px;padding:15px 17px;background:#fff;border:1px solid #eaecf1;border-radius:10px;box-shadow:var(--shadow);counter-increment:session4-topic}
+.session4-topic-list li::before{content:counter(session4-topic,decimal-leading-zero);flex:none;color:#5357d9;font:700 11px Manrope,sans-serif}
+.session4-topic-list h3{margin:0;color:#38415a;font-size:12px;line-height:1.5;font-weight:700}
+
+@media(max-width:680px){
+  .session4-page-heading{margin-bottom:16px}
+  .session4-page-heading h1{font-size:22px;line-height:1.25}
+  .session4-intro-card{padding:16px;margin-bottom:17px}
+  .session4-session-details{gap:18px}
+  .session4-topic-list{grid-template-columns:1fr;gap:9px}
+  .session4-topic-list li{min-height:58px;padding:13px 15px}
+}
+
+.session4-worksheet{min-width:0}
+.session4-page-heading{align-items:flex-start;gap:18px}
+.session4-print-button{flex:none;min-height:42px;justify-content:center}
+.session4-question-list{display:grid;gap:17px;margin-top:22px}
+.session4-question-group{min-width:0;padding:20px}
+.session4-group-title{margin:0 0 15px;color:#30374a;font:700 17px Manrope,sans-serif;line-height:1.4}
+.session4-scenario{min-width:0;margin-bottom:17px;padding:14px 16px;border:1px solid #e9ebf0;border-radius:8px;background:#fafbfc;color:#535b6c;font-size:13px;line-height:1.65}
+.session4-scenario h3{margin:0 0 7px;color:#38415a;font:700 12px Manrope,sans-serif}
+.session4-scenario p{margin:0 0 8px}
+.session4-scenario p:last-child{margin-bottom:0}
+.session4-scenario code{color:#39415a;font:600 12px ui-monospace,SFMono-Regular,Menlo,monospace;overflow-wrap:anywhere}
+.session4-questions{display:grid;gap:16px}
+.session4-question{min-width:0;display:grid;gap:7px}
+.session4-question label{display:grid;gap:5px;color:#38415a;font-size:13px;line-height:1.55;font-weight:600}
+.session4-question label span:first-child{color:#5357d9;font-size:11px;font-weight:700;letter-spacing:.35px}
+.session4-question textarea{display:block;width:100%;min-width:0;min-height:104px;resize:vertical;border:1px solid #dfe3eb;border-radius:7px;padding:11px 12px;background:#fff;color:#30374a;font:13px/1.6 'DM Sans',sans-serif;white-space:pre-wrap;overflow-wrap:anywhere}
+.session4-question textarea:focus-visible,.session4-print-button:focus-visible{outline:3px solid #888ae8;outline-offset:2px}
+.session4-print-answer{display:none}
+.session4-sequence{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin:12px 0 0;padding:0;list-style:none}
+.session4-sequence li{min-width:0;display:flex;flex-direction:column;justify-content:center;gap:6px;padding:10px;border:1px solid #e5e8ef;border-radius:7px;background:#fff}
+.session4-sequence li span{color:#737b8e;font-size:11px;font-weight:600}
+.session4-sequence li code{font-size:11px}
+.session4-flow{display:flex;align-items:center;justify-content:flex-start;gap:9px;flex-wrap:wrap;margin:12px 0 0;padding:0;list-style:none}
+.session4-flow li{display:flex;align-items:center;gap:9px}
+.session4-flow li>span:first-child{padding:8px 10px;border:1px solid #e5e8ef;border-radius:7px;background:#fff;color:#38415a;font-size:12px;font-weight:600}
+.session4-flow-arrow{color:#697285;font-size:15px}
+.session4-hierarchy,.session4-hierarchy ul{margin:9px 0 0;padding-left:24px;color:#38415a}
+.session4-hierarchy>li{font-weight:700}
+.session4-hierarchy ul{display:grid;gap:6px;margin-top:7px}
+.session4-dependency-columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:12px}
+.session4-dependency-columns>div{min-width:0;padding:12px;border:1px solid #e5e8ef;border-radius:7px;background:#fff}
+.session4-dependency-columns h3{margin:0 0 8px;color:#38415a;font-size:12px}
+.session4-dependency-columns ul{margin:0;padding-left:19px}
+.session4-dependency-columns li{margin:3px 0}
+.session4-dependency-columns p{margin:9px 0 0;color:#535b6c;font-size:12px}
+
+@media(max-width:760px){
+  .session4-sequence{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+@media(max-width:680px){
+  .session4-page-heading{align-items:flex-start;flex-direction:column;gap:12px}
+  .session4-print-button{width:100%}
+  .session4-question-list{gap:13px;margin-top:18px}
+  .session4-question-group{padding:16px}
+  .session4-group-title{font-size:16px}
+  .session4-scenario{padding:12px;font-size:12.5px}
+  .session4-question label{font-size:12.5px}
+  .session4-question textarea{min-height:100px;font-size:16px}
+  .session4-dependency-columns{grid-template-columns:1fr}
+  .session4-flow{gap:6px}
+  .session4-flow li{gap:6px}
+  .session4-flow li>span:first-child{padding:7px 8px;font-size:11px}
+}
+
+@page{size:A4 portrait;margin:15mm}
+@media print{
+  html,body,#root,.app-shell,.main-area{width:auto;min-width:0;min-height:0;margin:0!important;padding:0!important;background:#fff!important}
+  body{font:10.5pt/1.45 Arial,sans-serif;color:#111;print-color-adjust:exact;-webkit-print-color-adjust:exact}
+  .sidebar,.topbar,.session4-print-button{display:none!important}
+  .main-area{display:block!important}
+  .page-content{width:auto;max-width:none;margin:0;padding:0}
+  .session4-page-heading{display:block;margin:0 0 8mm}
+  .session4-page-heading .eyebrow{font-size:8pt;color:#444}
+  .session4-page-heading h1{max-width:none;margin:2mm 0;font-size:19pt;letter-spacing:0}
+  .session4-page-heading .session4-subtitle{margin:0;color:#333;font-size:10pt}
+  .session4-intro-card{margin:0 0 6mm;padding:0;border:0;box-shadow:none}
+  .session4-session-details{gap:12mm;padding-bottom:3mm;border-color:#999}
+  .session4-session-details span{font-size:8pt;color:#333}
+  .session4-session-details strong{font-size:9pt;color:#111}
+  .session4-intro-copy{padding-top:3mm}
+  .session4-intro-copy h2,.session4-topics-heading h2{font-size:11pt;color:#111}
+  .session4-intro-copy p,.session4-topics-heading p{font-size:9pt;line-height:1.5;color:#222}
+  .session4-intro-copy .session4-answer-warning{color:#111}
+  .session4-topics-section{margin-bottom:6mm}
+  .session4-topics-heading{margin-bottom:2mm}
+  .session4-topic-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:2mm}
+  .session4-topic-list li{min-height:0;padding:2mm 3mm;border-color:#bbb;border-radius:0;box-shadow:none}
+  .session4-topic-list h3{font-size:9pt;color:#111}
+  .session4-question-list{display:block;margin:0}
+  .session4-question-group{margin:0 0 6mm;padding:4mm;border:1px solid #aaa;border-radius:0;box-shadow:none;break-inside:auto;page-break-inside:auto}
+  .session4-group-title{margin:0 0 3mm;font-size:13pt;color:#111;break-after:avoid-page;page-break-after:avoid}
+  .session4-scenario{margin:0 0 4mm;padding:3mm;border-color:#bbb;border-radius:0;background:#fff;color:#111;font-size:9pt;line-height:1.45;break-inside:auto;page-break-inside:auto}
+  .session4-scenario h3,.session4-dependency-columns h3{font-size:9pt;color:#111}
+  .session4-scenario code{color:#111;font-size:8.5pt}
+  .session4-questions{display:block}
+  .session4-question{display:block;margin-bottom:4mm;break-inside:avoid-page;page-break-inside:avoid}
+  .session4-question label{display:block;margin-bottom:1.5mm;color:#111;font-size:9pt;break-after:avoid-page;page-break-after:avoid}
+  .session4-question label span{display:block}
+  .session4-question label span:first-child{color:#111;font-size:8pt}
+  .session4-question textarea{display:none!important}
+  .session4-print-answer{display:block;min-height:22mm;padding:2mm;border:1px solid #aaa;border-radius:0;color:#111;font:9.5pt/1.45 Arial,sans-serif;white-space:pre-wrap;overflow-wrap:anywhere;word-break:normal;break-inside:auto;page-break-inside:auto}
+  .session4-sequence{grid-template-columns:repeat(5,minmax(0,1fr));gap:2mm;margin-top:2mm}
+  .session4-sequence li{padding:2mm;border-color:#aaa;border-radius:0}
+  .session4-sequence li span,.session4-sequence li code{font-size:8pt;color:#111}
+  .session4-flow{gap:2mm;margin-top:2mm}
+  .session4-flow li{gap:2mm}
+  .session4-flow li>span:first-child{padding:1.5mm 2mm;border-color:#aaa;border-radius:0;color:#111;font-size:8pt}
+  .session4-flow-arrow{color:#111}
+  .session4-hierarchy,.session4-hierarchy ul{margin-top:1mm}
+  .session4-dependency-columns{gap:3mm;margin-top:2mm}
+  .session4-dependency-columns>div{padding:2mm;border-color:#aaa;border-radius:0}
+  .session4-dependency-columns li,.session4-dependency-columns p{font-size:8.5pt;color:#111}
+}

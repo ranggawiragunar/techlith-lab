@@ -13,6 +13,7 @@ import { Session3BoundaryPage } from '../pages/Session3BoundaryPage'
 import { Session3ProductPage } from '../pages/Session3ProductPage'
 import { Session3SourcePage } from '../pages/Session3SourcePage'
 import { Session3ClassroomLayout } from '../layouts/Session3ClassroomLayout'
+import { Session4WorksheetPage } from '../pages/Session4WorksheetPage'
 
 export function App() {
   return (
@@ -29,6 +30,7 @@ export function App() {
           <Route path="inventory/history" element={<StockHistoryPage />} />
           <Route path="inventory/report" element={<InventoryReportPage />} />
           <Route path="testing" element={<TestingPage />} />
+          <Route path="classroom/session-4" element={<Session4WorksheetPage />} />
           <Route path="classroom/session-3" element={<Session3ClassroomLayout />}>
             <Route index element={<Session3ClassroomPage />} />
             <Route path="boundary" element={<Session3BoundaryPage />} />
