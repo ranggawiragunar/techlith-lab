@@ -18,7 +18,7 @@ export const verificationValidationCourse = {
       number: 1,
       title: 'Menentukan Sasaran dan Level Pengujian pada Techlith Lab Inventory',
       deliveryModel: 'Mini Case',
-      status: 'planned',
+      status: 'available',
     },
     {
       number: 2,
