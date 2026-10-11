@@ -1,0 +1,7 @@
+Test ID,Related AC,Preconditions,Input,Expected Result,Actual Result,Status PASS/FAIL/BLOCKED,Firestore Verification,Evidence Reference,Notes
+ACC-01,AC-01,Seed baseline; inspect ITM-001,,"ITM-001 baseline visibility and amount, amountType, and history are checked",,,,,
+ACC-02,"AC-02; AC-05",Seed baseline; ITM-001 amount 10,Inbound 5,Item amount becomes 15; one stocktaking record with previous 10 and next 15; item history references that transaction,,,,,
+ACC-03,"AC-03; AC-05",Seed baseline; ITM-001 amount 10,Outbound 10,Item amount becomes 0; stocktaking records previous 10 and next 0; history references the transaction,,,,,
+ACC-04,AC-04,Seed baseline; ITM-001 amount 10,Outbound 11,Operation is rejected; item amount and history remain unchanged; no stocktaking document is committed,,,,,
+ACC-05-stocktaking-write,AC-06,Run npm run seed immediately before this case,Inbound 1; failure injection stocktaking-write,Clear failure feedback; no stock change; no committed transaction or history reference,,,,,
+ACC-05-item-update,AC-06,Run npm run seed immediately before this case,Inbound 1; failure injection item-update,Clear failure feedback; no stock change; no committed transaction or history reference,,,,,

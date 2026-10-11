@@ -8,7 +8,7 @@ export function AdminLayout() {
   const location = useLocation()
 
   useEffect(() => {
-    if (location.pathname !== '/admin/classroom/session-5') return
+    if (!['/admin/classroom/session-5', '/admin/classroom/session-6'].includes(location.pathname)) return
 
     function revealActiveMobileLink() {
       if (!window.matchMedia('(max-width: 680px)').matches) return
@@ -47,6 +47,7 @@ export function AdminLayout() {
           <NavLink to="/admin/classroom/session-3" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}><span className="nav-icon">▣</span>Session 3 — Inventory Testing</NavLink>
           <NavLink to="/admin/classroom/session-4" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}><span className="nav-icon" aria-hidden="true">◎</span>Session 4 — Object-Oriented Testing</NavLink>
           <NavLink to="/admin/classroom/session-5" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}><span className="nav-icon" aria-hidden="true">⇄</span>Sesi 5 — Integration Testing</NavLink>
+          <NavLink to="/admin/classroom/session-6" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}><span className="nav-icon" aria-hidden="true">✓</span>Sesi 6 — System Acceptance</NavLink>
           <NavLink to="/admin/testing" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}><span className="nav-icon">⚙</span>Testing Utilities</NavLink>
         </nav>
         <div className="sidebar-footer"><div className="local-status"><span className="status-dot" />Local database active</div><span className="sidebar-version">Foundation · Context 1</span></div>

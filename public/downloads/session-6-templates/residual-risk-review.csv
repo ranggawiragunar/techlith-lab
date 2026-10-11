@@ -1,0 +1,5 @@
+Risk ID,Description,Related Evidence,Likelihood,Impact,Risk Level,Mitigation,Owner,Review Date,Disposition
+RR-01,Stock data consistency,,,,,,,,
+RR-02,Outbound boundary behavior,,,,,,,,
+RR-03,Transaction error handling,,,,,,,,
+RR-04,Functionality outside the release candidate scope,,,,,,,,

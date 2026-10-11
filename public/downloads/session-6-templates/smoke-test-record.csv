@@ -1,0 +1,7 @@
+Record Type,Test ID,Objective,Preconditions,Expected Result,Actual Result,Status PASS/FAIL/BLOCKED,Evidence Reference,Notes,Smoke Gate Decision
+Test,SMK-01,Release candidate opens without fatal error,Local app and Firestore Emulator available,App opens and connects as expected,,,,,
+Test,SMK-02,Verify baseline inventory,Seed baseline is loaded,Three baseline items are visible,,,,,
+Test,SMK-03,Inbound 1 on ITM-001,ITM-001 starts from baseline amount 10,Amount changes from 10 to 11; transaction and history can be inspected,,,,,
+Test,SMK-04,Outbound 1 after SMK-03,Use the state produced by SMK-03,Amount changes from 11 to 10; transaction and history can be inspected,,,,,
+Test,SMK-05,Verify Firestore consistency,SMK-03 and SMK-04 have been executed,Compare item values with stocktakings and stocktakingHistory in the inspector and Emulator UI,,,,,
+Gate,,,,,,,,,
