@@ -1,0 +1,13 @@
+Case ID,Precondition,Action,Expected Result,Actual Result,Status,Evidence Location,Firestore Verification,Notes
+FSMK-01,Fresh baseline seeded,Open application,Application opens locally without fatal error,,,,,
+FSMK-02,Application open,Inspect items,Three baseline items with expected amountType and empty history are visible,,,,,
+FSMK-03,Fresh baseline seeded,Inbound 1 on ITM-001,Stock 10 to 11 and one linked transaction record,,,,,
+FSMK-04,After FSMK-03 without reseed,Outbound 1 on ITM-001,Stock 11 to 10 and second linked transaction record,,,,,
+FSMK-05,Smoke transactions complete,Compare item history and stocktakings,Current stock and transaction/history records are consistent,,,,,
+REG-F-01,Fresh baseline seeded,Submit outbound amount 0,Rejected by a recorded validation layer; no Firestore mutation,,,,,
+REG-F-02,Fresh baseline seeded,Submit outbound amount 10,Stock becomes 0 with one consistent transaction record,,,,,
+REG-F-03,Fresh baseline seeded,Submit outbound amount 11,Rejected with item and collections unchanged,,,,,
+REG-F-04,Fresh baseline seeded,Submit inbound amount 5,Stock becomes 15 with one consistent transaction record,,,,,
+REG-F-05,Fresh baseline seeded,Inbound 5 then outbound 3,Final stock 12 with two records and two history references,,,,,
+REG-F-06,Emulator not required,Run npm run regression,Product validation cases execute and suite reports its actual totals,,,,,
+REG-F-07,Use separate seeded baseline per scenario,Run normal then each failure injection,Normal commit is consistent; injected failures show no false success or partial writes,,,,,

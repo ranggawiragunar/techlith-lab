@@ -16,6 +16,7 @@ import { Session3ClassroomLayout } from '../layouts/Session3ClassroomLayout'
 import { Session4WorksheetPage } from '../pages/Session4WorksheetPage'
 import { Session5ClassroomPage } from '../pages/Session5ClassroomPage'
 import { Session6ClassroomPage } from '../pages/Session6ClassroomPage'
+import { Session7ClassroomPage } from '../pages/Session7ClassroomPage'
 
 export function App() {
   return (
@@ -35,6 +36,7 @@ export function App() {
           <Route path="classroom/session-4" element={<Session4WorksheetPage />} />
           <Route path="classroom/session-5" element={<Session5ClassroomPage />} />
           <Route path="classroom/session-6" element={<Session6ClassroomPage />} />
+          <Route path="classroom/session-7" element={<Session7ClassroomPage />} />
           <Route path="classroom/session-3" element={<Session3ClassroomLayout />}>
             <Route index element={<Session3ClassroomPage />} />
             <Route path="boundary" element={<Session3BoundaryPage />} />

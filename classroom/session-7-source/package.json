@@ -1,0 +1,31 @@
+{
+  "name": "techlith-session-7-classroom",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": "24.x"
+  },
+  "scripts": {
+    "emulators": "firebase emulators:start --only firestore --project demo-techlith-inventory-session-7",
+    "seed": "node scripts/seed.mjs",
+    "start": "vite --host 127.0.0.1 --port 3000 --strictPort",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc -b && vite build",
+    "regression": "node --test --test-reporter=tap tests/regression.test.mjs"
+  },
+  "dependencies": {
+    "firebase": "^11.0.2",
+    "firebase-admin": "^13.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "firebase-tools": "^15.32.1",
+    "typescript": "~5.7.2",
+    "vite": "^6.4.1"
+  }
+}

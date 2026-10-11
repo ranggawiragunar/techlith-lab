@@ -1,0 +1,6 @@
+ID,Type,Description,Severity,Impact,Status,Evidence,Release Disposition,Mitigation,Owner,Retest Evidence,Notes
+BUG-S3-01,Historical defect,Session 3 product validation defect pattern,,,,,,,,,
+BUG-S5-01,Historical proposed defect,Session 5 baseline partial-write or false-success risk,,,,,,,,,
+S7-NEW-01,New Session 7 defect,,,,,,,,,,
+S7-NEW-02,New Session 7 defect,,,,,,,,,,
+RISK-SALES-CUSTOMER,Out-of-scope dependency,Sales/customer integration is outside the classroom inventory scope,,,,,,,,,

@@ -1,0 +1,9 @@
+Requirement or Risk,Requirement Summary,Evidence from S3,Evidence from S5,Evidence from S6,Evidence from S7,Actual Evidence Location,Final Status,Related Defect,Release Disposition,Notes
+REQ-STK-01,Valid inbound updates current stock consistently,,,,,,,,,
+REQ-STK-03,Outbound cannot reduce stock below zero,,,,,,,,,
+REQ-STK-04,Invalid or zero stock movement is rejected without mutation,,,,,,,,,
+REQ-HIS-01,Stocktaking record captures item operation amount and before/after values,,,,,,,,,
+REQ-HIS-02,Item history references correspond to persisted stocktaking records,,,,,,,,,
+Product validation,Required product fields and values are validated,,,,,,,,,
+Partial-write / false-success,Failures do not leave partial records updates or false success,,,,,,,,,
+Acceptance critical flow,Final release critical use case works end to end,,,,,,,,,
