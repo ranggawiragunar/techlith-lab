@@ -4,9 +4,11 @@ import path from 'node:path'
 
 const cwd = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const variants = ['M01', 'M02', 'M03', 'M04']
+const baselineOnly = process.argv.includes('--baseline')
 const results = []
 for (const variant of variants) {
-  const run = spawnSync(process.execPath, ['node_modules/vitest/vitest.mjs', 'run', '--coverage.enabled=false'], {
+  const testPath = baselineOnly ? ['tests/baseline'] : []
+  const run = spawnSync(process.execPath, ['node_modules/vitest/vitest.mjs', 'run', ...testPath, '--coverage.enabled=false'], {
     cwd, encoding: 'utf8', env: { ...process.env, TECHLITH_MUTANT: variant },
   })
   const output = `${run.stdout ?? ''}\n${run.stderr ?? ''}`

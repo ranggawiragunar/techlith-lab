@@ -1,11 +1,14 @@
 {
-  "name": "techlith-session-6-release-candidate-exercise",
+  "name": "session-6-inventory-execution",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "test:execution:rc1": "node scripts/run-suite.mjs RC1 acceptance",
+    "test:execution:rc2": "node scripts/run-suite.mjs RC2 acceptance",
+    "test:regression:rc2": "node scripts/run-suite.mjs RC2 regression",
     "test:rc1": "node scripts/run-suite.mjs RC1 acceptance",
     "test:rc2": "node scripts/run-suite.mjs RC2 acceptance",
     "retest:rc2": "node scripts/run-suite.mjs RC2 retest",
