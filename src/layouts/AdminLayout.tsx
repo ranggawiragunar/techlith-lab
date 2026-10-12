@@ -7,7 +7,7 @@ export function AdminLayout() {
   const location = useLocation()
   const navigate = useNavigate()
   const isVerificationValidationPage = location.pathname.startsWith(verificationValidationRoutes.basePath)
-  const isSession1Page = location.pathname === verificationValidationRoutes.session1Path
+  const activeSession = Object.entries(verificationValidationRoutes.sessionPaths).find(([, path]) => path === location.pathname)?.[0]
 
   function handleLogout() {
     signOut()
@@ -28,7 +28,7 @@ export function AdminLayout() {
           <div className="nav-section-title">Classroom</div>
           <NavLink to={verificationValidationRoutes.basePath} className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}><span className="nav-icon" aria-hidden="true">▤</span>Verification &amp; Validation</NavLink>
         </nav>
-        <div className="sidebar-footer"><div className="local-status"><span className="status-dot" />Local database active</div><span className="sidebar-version">{isSession1Page ? 'Context 01 · Session 1' : isVerificationValidationPage ? 'Context 00 · Foundation' : 'Foundation · Context 1'}</span></div>
+        <div className="sidebar-footer"><div className="local-status"><span className="status-dot" />Local database active</div><span className="sidebar-version">{activeSession ? `Context ${activeSession.padStart(2, '0')} · Session ${activeSession}` : isVerificationValidationPage ? 'Context 00 · Foundation' : 'Foundation · Context 1'}</span></div>
       </aside>
       <main className="main-area">
         <header className="topbar"><div className="breadcrumb">Techlith Lab <span>/</span> {isVerificationValidationPage ? 'Verification & Validation' : 'Inventory Management Laboratory'}</div><div className="user-menu"><div className="avatar">{user?.displayName.charAt(0) ?? 'A'}</div><div className="user-label"><strong>{user?.displayName}</strong><span>Administrator</span></div><button className="button button-quiet logout-button" onClick={handleLogout}>Log out</button></div></header>

@@ -9,6 +9,7 @@ import { StockHistoryPage } from '../pages/StockHistoryPage'
 import { TestingPage } from '../pages/TestingPage'
 import { VerificationValidationPage, verificationValidationRoutes } from '../features/verificationValidation'
 import { VerificationValidationSession1Page } from '../features/verificationValidation/pages/VerificationValidationSession1Page'
+import { VerificationValidationSession2Page } from '../features/verificationValidation/pages/VerificationValidationSession2Page'
 
 export function App() {
   return (
@@ -25,7 +26,8 @@ export function App() {
           <Route path="inventory/history" element={<StockHistoryPage />} />
           <Route path="testing" element={<TestingPage />} />
           <Route path={verificationValidationRoutes.nestedPath} element={<VerificationValidationPage />} />
-          <Route path={verificationValidationRoutes.session1NestedPath} element={<VerificationValidationSession1Page />} />
+          <Route path={verificationValidationRoutes.sessionNestedPaths[1]} element={<VerificationValidationSession1Page />} />
+          <Route path={verificationValidationRoutes.sessionNestedPaths[2]} element={<VerificationValidationSession2Page />} />
         </Route>
       </Route>
       <Route path="*" element={<Navigate to="/admin/dashboard" replace />} />

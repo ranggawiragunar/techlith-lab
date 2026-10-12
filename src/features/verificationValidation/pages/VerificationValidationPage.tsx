@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { verificationValidationCourse, type SessionStatus } from '../courseConfig'
-import { verificationValidationRoutes } from '../routes'
+import { getVerificationValidationSessionPath } from '../routes'
 
 function getSessionStatusLabel(status: SessionStatus) {
   return status === 'available' ? 'Available' : 'Coming later'
@@ -41,8 +41,10 @@ export function VerificationValidationPage() {
       </div>
 
       <ol className="verification-session-list">
-        {course.sessions.map((session) => (
-          <li className="content-card verification-session-card" key={session.number}>
+        {course.sessions.map((session) => {
+          const sessionPath = session.status === 'available' ? getVerificationValidationSessionPath(session.number) : undefined
+          return (
+            <li className="content-card verification-session-card" key={session.number}>
             <span className="verification-session-number" aria-hidden="true">
               {String(session.number).padStart(2, '0')}
             </span>
@@ -51,10 +53,11 @@ export function VerificationValidationPage() {
                 <span>{session.deliveryModel}</span>
                 <span className="verification-session-status">{getSessionStatusLabel(session.status)}</span>
               </div>
-              <h3>{session.status === 'available' ? <Link to={verificationValidationRoutes.session1Path}>{session.title}</Link> : session.title}</h3>
+              <h3>{sessionPath ? <Link to={sessionPath}>{session.title}</Link> : session.title}</h3>
             </div>
-          </li>
-        ))}
+            </li>
+          )
+        })}
       </ol>
     </section>
   )

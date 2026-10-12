@@ -17,3 +17,7 @@ Use `verification-validation` for the course slug and lowercase kebab-case for d
 The Main Application provides the existing local-first inventory laboratory. The Classroom Portal provides course navigation and materials. Session-specific source code and testing tools belong in isolated classroom sources when required; they must not expand the root dependency surface without a specific foundation need.
 
 Downloads for this course belong under `public/downloads/verification-validation/`. Do not put answer keys or instructor-only conclusions in the public namespace.
+
+## Session 2 baseline boundary
+
+The Session 2 classroom-only preparation helper belongs under `src/features/verificationValidation/services/`. It uses the existing Testing Utilities reset operation, then prepares the existing `BRG-005` whole-number item at stock 10 and leaves movement history empty. This deterministic classroom state does not change permanent seed values or Main Application inventory rules.
