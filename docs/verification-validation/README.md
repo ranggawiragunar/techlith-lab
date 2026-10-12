@@ -41,4 +41,15 @@ Do not merge this branch with `software-testing` as an implementation shortcut.
 - **Student workflow:** students author tests under `tests/` for code-based, fault-based, usage-based, and model-based reasoning. Session 2 candidates are carry-forward inputs, not mandatory one-to-one unit tests.
 - **Materials:** downloadable starter at `public/downloads/verification-validation/session-3-source.zip`; practical evidence template at `public/downloads/verification-validation/session-3-practical-record.csv`.
 - **Source topics:** controlled mutants M01–M04, the classroom operational profile, and the in-memory ACTIVE/ARCHIVED model. No mutant outcome, normalized metric target, or later-session evidence is included.
-- **Progressive disclosure:** coverage is feedback only in Session 3. Session 4 remains planned and interprets student evidence in its own context.
+- **Progressive disclosure:** coverage is feedback only in Session 3. Session 4 interprets a separate normalized classroom evidence pack.
+
+## Session 4
+
+- **Route:** `/admin/classroom/verification-validation/session-4`
+- **Delivery:** Mini Case — memilih kombinasi teknik, membaca metrics, menetapkan prioritas, dan menyusun improvement plan.
+- **Normalized evidence:** shared classroom dataset dengan statement coverage 88%, branch coverage 72%, mutation score 50%, 2/4 mutants killed, dan 2/4 survived. Angka tersebut menormalisasi bahan diskusi dan tidak menyatakan bahwa semua mahasiswa mendapat output sama dari Session 3.
+- **Mutants:** M01 KILLED, M02 SURVIVED, M03 KILLED, M04 SURVIVED dalam dataset kelas. Status menjadi evidence untuk interpretasi, bukan verdict kualitas keseluruhan.
+- **Operational profile:** 35/25/25/10/5 untuk View Inventory, Stock Inbound, Stock Outbound, Stock History, dan Archive / Restore; classroom operational profile, bukan production telemetry.
+- **State transition:** ARCHIVED rejection telah diverifikasi. Remaining evidence gap meliputi restore → ACTIVE, history persistence/availability, dan behavior lintas state setelah archive/restore; gap tersebut belum otomatis merupakan defect.
+- **Materials:** in-memory strategy/metrics worksheet di halaman Session 4; blank template dan normalized evidence pack di `public/downloads/verification-validation/`.
+- **Boundary:** tidak ada testing engine baru, perubahan source Session 3, atau perubahan Main Application. Worksheet menyiapkan test/evidence improvement plan untuk dievaluasi pada Session 5 tanpa memuat hasil sesi berikutnya.

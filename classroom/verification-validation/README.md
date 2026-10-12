@@ -14,4 +14,11 @@ Session 3 uses an isolated reference classroom rule set aligned with canonical r
 
 The source includes controlled fault variants M01–M04, a classroom operational profile, and an in-memory ACTIVE/ARCHIVED state model. Students carry requirement-to-technique mapping, EP/BVA reasoning, exploratory ideas, six candidate cases, and requirement-derived expected results from Session 2 into their source-level work. Candidate cases can inform tests without requiring one-to-one translation.
 
-Session 4 remains planned; this project contains no later evidence pack, coverage target, mutation outcome, or instructor conclusion.
+## Session 4
+
+- **Status:** Available · Mini Case
+- **Portal route:** `/admin/classroom/verification-validation/session-4`
+- **Normalized dataset:** `public/downloads/verification-validation/session-4-normalized-evidence-pack.csv`
+- **Worksheet template:** `public/downloads/verification-validation/session-4-strategy-metrics-worksheet.csv`
+
+Session 4 interprets a normalized classroom evidence pack separate from Session 3 student test output. The page includes the metrics and controlled-mutant status for this mini case, the classroom operational profile, and the verified ARCHIVED rejection plus remaining restore/history/cross-state evidence gaps. It adds no runner and does not alter the standalone Session 3 source.
