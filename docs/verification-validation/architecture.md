@@ -24,6 +24,12 @@ The Session 2 classroom-only preparation helper belongs under `src/features/veri
 
 ## Session 3 isolated source
 
-The Session 3 route is `/admin/classroom/verification-validation/session-3`; Session 1–3 routes are explicit, while Sessions 4–7 remain planned and unlinked. The student starter source of truth is `classroom/verification-validation/session-3-source/`, with a downloadable archive at `public/downloads/verification-validation/session-3-source.zip` and evidence template at `public/downloads/verification-validation/session-3-practical-record.csv`.
+The Session 3 route is `/admin/classroom/verification-validation/session-3`; Session 1–3 routes are explicit. The student starter source of truth is `classroom/verification-validation/session-3-source/`, with a downloadable archive at `public/downloads/verification-validation/session-3-source.zip` and evidence template at `public/downloads/verification-validation/session-3-practical-record.csv`.
 
 Session 3's reference classroom rule set is aligned with canonical requirements but is not a byte-for-byte snapshot of the Main Application. It uses standalone TypeScript/Vite/Vitest/V8 coverage dependencies from its own package manifest and lockfile; root dependencies and inventory services are untouched. Student-authored tests live in its `tests/` directory. Controlled variants M01–M04, the classroom operational profile, and an in-memory ACTIVE/ARCHIVED state model support fault, usage, and model-based work. Coverage is feedback only, and no later-session outcome is stored in student-facing content.
+
+## Session 4 normalized evidence
+
+Session 4 is available at `/admin/classroom/verification-validation/session-4` as a Mini Case. It reads a separate, deterministic classroom evidence pack: statement coverage 88%, branch coverage 72%, mutation score 50%, 2/4 killed, and 2/4 survived, with M01/M03 KILLED and M02/M04 SURVIVED. These figures are normalized discussion data and do not claim identical Session 3 student results. The page adds no test runner or mutation engine and does not modify the Session 3 source or Main Application.
+
+The Session 4 worksheet and normalized evidence CSV are published under `public/downloads/verification-validation/`. The classroom operational profile stays at 35/25/25/10/5 and is not production telemetry. State evidence records that ARCHIVED rejection is verified; remaining evidence gaps are restore → ACTIVE, historical evidence persistence/availability across archive/restore, and cross-state behavior. These gaps are not labeled defects without supporting evidence. Students carry a traceable improvement plan into Session 5; later-session outcomes stay undisclosed.

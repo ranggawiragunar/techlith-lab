@@ -36,7 +36,7 @@ export const verificationValidationCourse = {
       number: 4,
       title: 'Memilih Kombinasi Teknik dan Membaca Test Metrics pada Techlith Lab Inventory',
       deliveryModel: 'Mini Case',
-      status: 'planned',
+      status: 'available',
     },
     {
       number: 5,
