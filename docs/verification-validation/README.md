@@ -31,3 +31,14 @@ Do not merge this branch with `software-testing` as an implementation shortcut.
 - **Worksheet:** in-memory objective/technique mapping, EP/BVA classifications, experience ideas, and candidate test design; blank template at `public/downloads/verification-validation/session-2-test-design-worksheet.csv`.
 - **Progressive disclosure:** design remains black-box and user-facing. Expected results are reasoned from requirements; the page does not expose implementation details, answer keys, or later-session results.
 - **Carry-forward:** requirement/objective/technique mapping, EP/BVA reasoning, experience-based ideas, six candidate cases, and their requirement-based expected results prepare students for Session 3.
+
+## Session 3
+
+- **Route:** `/admin/classroom/verification-validation/session-3`
+- **Delivery:** Praktikum — source-level testing of code, controlled faults, usage, and a state model.
+- **Environment boundary:** `classroom/verification-validation/session-3-source/` is an isolated reference classroom rule set aligned with canonical requirements. It is not a byte-for-byte snapshot of the Main Techlith Lab application. Reference outbound behavior follows REQ-INV-002; it does not reproduce the Main Application observation from Session 1 and is not described as a “fixed version of the bug.”
+- **Tooling:** standalone Node.js LTS, npm, TypeScript, Vite, Vitest, and V8 coverage. Its dependencies and lockfile are isolated; root package manifests are unchanged.
+- **Student workflow:** students author tests under `tests/` for code-based, fault-based, usage-based, and model-based reasoning. Session 2 candidates are carry-forward inputs, not mandatory one-to-one unit tests.
+- **Materials:** downloadable starter at `public/downloads/verification-validation/session-3-source.zip`; practical evidence template at `public/downloads/verification-validation/session-3-practical-record.csv`.
+- **Source topics:** controlled mutants M01–M04, the classroom operational profile, and the in-memory ACTIVE/ARCHIVED model. No mutant outcome, normalized metric target, or later-session evidence is included.
+- **Progressive disclosure:** coverage is feedback only in Session 3. Session 4 remains planned and interprets student evidence in its own context.

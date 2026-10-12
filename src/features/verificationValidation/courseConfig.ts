@@ -30,7 +30,7 @@ export const verificationValidationCourse = {
       number: 3,
       title: 'Menguji Kode, Fault, Usage, dan Model pada Techlith Lab Inventory',
       deliveryModel: 'Praktikum',
-      status: 'planned',
+      status: 'available',
     },
     {
       number: 4,

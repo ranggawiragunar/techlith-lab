@@ -1,5 +1,6 @@
 export { VerificationValidationPage } from './pages/VerificationValidationPage'
 export { VerificationValidationSession1Page } from './pages/VerificationValidationSession1Page'
 export { VerificationValidationSession2Page } from './pages/VerificationValidationSession2Page'
+export { VerificationValidationSession3Page } from './pages/VerificationValidationSession3Page'
 export { verificationValidationCourse } from './courseConfig'
 export { verificationValidationRoutes } from './routes'
