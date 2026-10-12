@@ -5,3 +5,4 @@ export { VerificationValidationSession3Page } from './pages/VerificationValidati
 export { VerificationValidationSession4Page } from './pages/VerificationValidationSession4Page'
 export { verificationValidationCourse } from './courseConfig'
 export { verificationValidationRoutes } from './routes'
+export { VerificationValidationSession5Page } from './pages/VerificationValidationSession5Page'

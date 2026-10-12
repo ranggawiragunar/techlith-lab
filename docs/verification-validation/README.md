@@ -53,3 +53,7 @@ Do not merge this branch with `software-testing` as an implementation shortcut.
 - **State transition:** ARCHIVED rejection telah diverifikasi. Remaining evidence gap meliputi restore → ACTIVE, history persistence/availability, dan behavior lintas state setelah archive/restore; gap tersebut belum otomatis merupakan defect.
 - **Materials:** in-memory strategy/metrics worksheet di halaman Session 4; blank template dan normalized evidence pack di `public/downloads/verification-validation/`.
 - **Boundary:** tidak ada testing engine baru, perubahan source Session 3, atau perubahan Main Application. Worksheet menyiapkan test/evidence improvement plan untuk dievaluasi pada Session 5 tanpa memuat hasil sesi berikutnya.
+
+## Session 5
+
+Session 5 is available at `/admin/classroom/verification-validation/session-5`. Its isolated source is `classroom/verification-validation/session-5-source/`, derived from the Session 3 reference rules and explicitly not a byte-for-byte Main Application snapshot. The official baseline suite is designed for 88% scoped statement, 72% scoped branch, and 50% mutation (M01/M03 killed; M02/M04 survived). V8 supplies raw and machine-readable coverage; the standalone scoped calculation documents its source scope. Students add tests toward 100%/100%/4-of-4, using blank work products and evidence for state-transition gaps. The Session 6 carry-forward is generic. No Main Application behavior or root dependency changes are part of this session.

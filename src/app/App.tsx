@@ -12,6 +12,7 @@ import { VerificationValidationSession1Page } from '../features/verificationVali
 import { VerificationValidationSession2Page } from '../features/verificationValidation/pages/VerificationValidationSession2Page'
 import { VerificationValidationSession3Page } from '../features/verificationValidation/pages/VerificationValidationSession3Page'
 import { VerificationValidationSession4Page } from '../features/verificationValidation/pages/VerificationValidationSession4Page'
+import { VerificationValidationSession5Page } from '../features/verificationValidation/pages/VerificationValidationSession5Page'
 
 export function App() {
   return (
@@ -32,6 +33,7 @@ export function App() {
           <Route path={verificationValidationRoutes.sessionNestedPaths[2]} element={<VerificationValidationSession2Page />} />
           <Route path={verificationValidationRoutes.sessionNestedPaths[3]} element={<VerificationValidationSession3Page />} />
           <Route path={verificationValidationRoutes.sessionNestedPaths[4]} element={<VerificationValidationSession4Page />} />
+          <Route path={verificationValidationRoutes.sessionNestedPaths[5]} element={<VerificationValidationSession5Page />} />
         </Route>
       </Route>
       <Route path="*" element={<Navigate to="/admin/dashboard" replace />} />
