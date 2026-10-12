@@ -21,3 +21,9 @@ Downloads for this course belong under `public/downloads/verification-validation
 ## Session 2 baseline boundary
 
 The Session 2 classroom-only preparation helper belongs under `src/features/verificationValidation/services/`. It uses the existing Testing Utilities reset operation, then prepares the existing `BRG-005` whole-number item at stock 10 and leaves movement history empty. This deterministic classroom state does not change permanent seed values or Main Application inventory rules.
+
+## Session 3 isolated source
+
+The Session 3 route is `/admin/classroom/verification-validation/session-3`; Session 1–3 routes are explicit, while Sessions 4–7 remain planned and unlinked. The student starter source of truth is `classroom/verification-validation/session-3-source/`, with a downloadable archive at `public/downloads/verification-validation/session-3-source.zip` and evidence template at `public/downloads/verification-validation/session-3-practical-record.csv`.
+
+Session 3's reference classroom rule set is aligned with canonical requirements but is not a byte-for-byte snapshot of the Main Application. It uses standalone TypeScript/Vite/Vitest/V8 coverage dependencies from its own package manifest and lockfile; root dependencies and inventory services are untouched. Student-authored tests live in its `tests/` directory. Controlled variants M01–M04, the classroom operational profile, and an in-memory ACTIVE/ARCHIVED state model support fault, usage, and model-based work. Coverage is feedback only, and no later-session outcome is stored in student-facing content.
