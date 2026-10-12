@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
-import { applyOutbound } from '../src/inventoryRules'
-import { validateQuantity } from '../src/quantityRules'
-import type { InventoryItem } from '../src/types'
+import { applyOutbound } from '../../src/inventoryRules'
+import { validateQuantity } from '../../src/quantityRules'
+import type { InventoryItem } from '../../src/types'
 
 const active: InventoryItem = { id: 'item-1', code: 'ITM-001', unit: 'pcs', stock: 10, state: 'ACTIVE' }
 

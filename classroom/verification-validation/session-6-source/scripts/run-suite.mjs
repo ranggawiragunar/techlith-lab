@@ -5,7 +5,7 @@ import { spawnSync } from 'node:child_process'
 import { fileURLToPath } from 'node:url'
 
 const [release, suite] = process.argv.slice(2)
-const files = { acceptance: 'tests/acceptance.test.ts', retest: 'tests/retest.test.ts', regression: 'tests/regression.test.ts' }
+const files = { acceptance: 'tests/execution.spec.ts', retest: 'tests/retest.spec.ts', regression: 'tests/regression.spec.ts' }
 const expectedCounts = { acceptance: 6, retest: 1, regression: 5 }
 if (!['RC1', 'RC2'].includes(release) || !(suite in files)) {
   console.error('Usage: node scripts/run-suite.mjs RC1|RC2 acceptance|retest|regression')

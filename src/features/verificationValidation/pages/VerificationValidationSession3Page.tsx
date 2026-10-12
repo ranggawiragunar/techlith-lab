@@ -10,11 +10,13 @@ const requirements = [
   ['REQ-INV-006', 'Successful movement menjaga konsistensi prevAmount, amount, dan nextAmount.'],
 ] as const
 
-const setupCommands = `# Extract session-3-source.zip, then enter the extracted folder
-npm ci
-npm test
-npm run test:watch
+const setupCommands = `# Extract session-3-inventory-classroom.zip, then enter the extracted folder
+npm install
+npm run test
 npm run coverage
+npm run mutation -- --list
+npm run mutation -- --mutant M02
+npm run mutation -- --summary
 npm run build`
 
 export function VerificationValidationSession3Page() {
@@ -48,10 +50,10 @@ export function VerificationValidationSession3Page() {
       <section className="content-card s3-panel" aria-labelledby="s3-prereq-title">
         <div className="eyebrow">STARTER PROJECT</div>
         <h2 id="s3-prereq-title">Siapkan environment</h2>
-        <p>Gunakan Node.js LTS dan npm. Starter tidak memerlukan database, Firebase Emulator, Java, Docker, atau cloud service. Unduh dan extract ZIP, lalu jalankan command dari folder `session-3-source`.</p>
-        <div className="s3-links"><a className="button button-primary" href="/downloads/verification-validation/session-3-source.zip" download>Download Session 3 source ZIP</a><a href="/downloads/verification-validation/session-3-practical-record.csv" download>Unduh practical record CSV</a></div>
+        <p>Gunakan Node.js LTS dan npm. Starter tidak memerlukan database, Firebase Emulator, Java, Docker, atau cloud service. Unduh dan extract ZIP, lalu jalankan command dari folder `session-3-inventory-classroom`.</p>
+        <div className="s3-links"><a className="button button-primary" href="/downloads/verification-validation/session-3-inventory-classroom.zip" download>Download Session 3 inventory classroom ZIP</a><a href="/downloads/verification-validation/session-3-practical-record.csv" download>Unduh practical record CSV</a></div>
         <pre className="s3-code"><code>{setupCommands}</code></pre>
-        <p className="s3-muted">Vitest dapat berjalan sebelum Anda menambahkan test; starter tidak menyertakan jawaban requirement. Buat test sendiri di folder `tests/`. Coverage adalah feedback untuk membantu membaca test yang Anda tulis.</p>
+        <p className="s3-muted">Starter menyertakan empat baseline orientasi yang sengaja belum lengkap; test tambahan tetap Anda rancang sendiri di folder `tests/`. Coverage dan mutation adalah feedback dari suite yang benar-benar Anda jalankan.</p>
       </section>
 
       <section className="content-card s3-panel" aria-labelledby="s3-source-map-title">
@@ -61,9 +63,11 @@ export function VerificationValidationSession3Page() {
           <li><code>src/types.ts</code> — inventory, movement, state, dan profile types.</li>
           <li><code>src/quantityRules.ts</code> — positive quantity, precision, dan unit domain.</li>
           <li><code>src/inventoryRules.ts</code> — reference outbound decision dan movement result.</li>
-          <li><code>src/inventoryState.ts</code> — ACTIVE/ARCHIVED transitions dan movement eligibility.</li>
-          <li><code>src/usageProfile.ts</code> — classroom operational profile.</li>
+          <li><code>src/inventoryState.ts</code> / <code>src/itemState.ts</code> — ACTIVE/ARCHIVED transitions dan movement eligibility.</li>
+          <li><code>src/usageProfile.ts</code> / <code>src/operationalProfile.ts</code> — classroom operational profile.</li>
           <li><code>src/mutants/M01.ts–M04.ts</code> — controlled variants untuk fault-based reasoning.</li>
+          <li><code>mutants/manifest.json</code> — ID dan deskripsi variants.</li>
+          <li><code>scripts/run-mutation.mjs</code> — perintah list, mutant tunggal, dan summary.</li>
           <li><code>tests/</code> — tempat Anda membuat dan mengembangkan test.</li>
           <li><code>src/main.ts</code> — halaman orientasi source; bukan duplicate inventory UI.</li>
         </ul>
@@ -118,7 +122,7 @@ export function VerificationValidationSession3Page() {
         <div className="eyebrow">TROUBLESHOOTING</div>
         <h2 id="s3-troubleshoot-title">Jika command tidak berjalan</h2>
         <ul className="s3-steps">
-          <li>Pastikan terminal berada di folder hasil extract `session-3-source`.</li>
+          <li>Pastikan terminal berada di folder hasil extract `session-3-inventory-classroom`.</li>
           <li>Periksa `node --version` dan gunakan Node.js LTS beserta npm.</li>
           <li>Jika dependency belum ada atau tidak cocok dengan lockfile, jalankan kembali `npm ci`.</li>
           <li>Jika belum ada test, buat file `.test.ts` di `tests/`; starter memang tidak berisi answer suite.</li>

@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import { outbound, createScenario, transition } from '../src/inventoryScenario'
-import type { InventoryItem } from '../src/types'
+import { outbound, createScenario, transition } from '../../src/inventoryScenario'
+import type { InventoryItem } from '../../src/types'
 
 const archived: InventoryItem = { id: 'item-1', code: 'ITM-001', unit: 'pcs', stock: 10, state: 'ARCHIVED' }
 
