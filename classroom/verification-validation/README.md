@@ -33,3 +33,12 @@ Session 4 interprets a normalized classroom evidence pack separate from Session 
 Session 5 is derived from the canonical Session 3 reference rules; it remains an isolated classroom environment and is not a byte-for-byte Main Application snapshot. Its official baseline suite is intentionally incomplete. Actual V8 data supports documented scoped baseline metrics of 88% statements and 72% branches, and the deterministic Vitest mutation harness produces 50%: M01/M03 KILLED and M02/M04 SURVIVED. Students add tests to explore coverage, exact-stock and decimal-precision distinctions, and restore/history/cross-state evidence. The acceptance target is 100%/100%/4-of-4, not a prefilled student result.
 
 The standalone source contains no answer suite. It bundles blank planning, design, execution, metrics, findings, evidence, and reusable-asset work products. Root dependencies, Main Application business behavior, permanent seed, Session 3 source, and Session 4 evidence pack are unchanged. Student work carries forward generically to Session 6.
+
+## Session 6
+
+- **Status:** Available · Praktikum
+- **Portal route:** `/admin/classroom/verification-validation/session-6`
+- **Isolated source:** `classroom/verification-validation/session-6-source/`
+- **Student downloads:** `public/downloads/verification-validation/session-6-source.zip` and `session-6-work-products.zip`
+
+Session 6 is a deterministic, in-memory controlled release-candidate exercise with named execution, retest, and regression commands. It uses the canonical REQ-INV-001–006 and six scenario IDs, plus blank execution and defect-tracking work products. Students run RC1 and record evidence before reviewing the follow-up candidate. The candidate source is separate from Main Application and earlier classroom projects.

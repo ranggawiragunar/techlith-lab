@@ -48,7 +48,7 @@ export const verificationValidationCourse = {
       number: 6,
       title: 'Menjalankan Test Activities dengan Tool Support dan Defect Tracking pada Techlith Lab Inventory',
       deliveryModel: 'Praktikum',
-      status: 'planned',
+      status: 'available',
     },
     {
       number: 7,

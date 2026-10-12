@@ -1,0 +1,20 @@
+{
+  "name": "techlith-session-6-release-candidate-exercise",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "test:rc1": "node scripts/run-suite.mjs RC1 acceptance",
+    "test:rc2": "node scripts/run-suite.mjs RC2 acceptance",
+    "retest:rc2": "node scripts/run-suite.mjs RC2 retest",
+    "regression:rc2": "node scripts/run-suite.mjs RC2 regression"
+  },
+  "devDependencies": {
+    "@types/node": "^22.19.0",
+    "typescript": "~5.7.3",
+    "vite": "^6.4.4",
+    "vitest": "^5.0.3"
+  }
+}

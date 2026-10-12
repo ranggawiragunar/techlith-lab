@@ -6,6 +6,7 @@ const sessionPaths = {
   3: `${verificationValidationCourse.baseRoute}/session-3`,
   4: `${verificationValidationCourse.baseRoute}/session-4`,
   5: `${verificationValidationCourse.baseRoute}/session-5`,
+  6: `${verificationValidationCourse.baseRoute}/session-6`,
 } as const
 
 const sessionNestedPaths = {
@@ -14,6 +15,7 @@ const sessionNestedPaths = {
   3: sessionPaths[3].slice('/admin/'.length),
   4: sessionPaths[4].slice('/admin/'.length),
   5: sessionPaths[5].slice('/admin/'.length),
+  6: sessionPaths[6].slice('/admin/'.length),
 } as const
 
 export const verificationValidationRoutes = {

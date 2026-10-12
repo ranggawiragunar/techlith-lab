@@ -1,0 +1,45 @@
+import { Link } from 'react-router-dom'
+import { verificationValidationRoutes } from '../routes'
+
+const scenarios = [
+  ['TC-INV-S6-001', 'REQ-INV-003 / REQ-INV-006', 'pcs', '10', '1', 'Accepted; next stock 9'],
+  ['TC-INV-S6-002', 'REQ-INV-003', 'pcs', '10', '1.5', 'Rejected; stock unchanged'],
+  ['TC-INV-S6-003', 'REQ-INV-004 / REQ-INV-006', 'meter', '10', '1.5', 'Accepted; next stock 8.5'],
+  ['TC-INV-S6-004', 'REQ-INV-001', 'pcs', '10', '0', 'Rejected; stock unchanged'],
+  ['TC-INV-S6-005', 'REQ-INV-001', 'pcs', '10', '-1', 'Rejected; stock unchanged'],
+  ['TC-INV-S6-006', 'REQ-INV-002', 'pcs', '10', '11', 'Rejected; stock unchanged'],
+] as const
+const products = ['Execution record CSV', 'Failure investigation', 'Bug report', 'Retest and regression CSV', 'Mini RTM', 'Test summary']
+const commands = ['npm ci', 'npm run test:rc1', 'npm run test:rc2', 'npm run retest:rc2', 'npm run regression:rc2', 'npm run build']
+
+export function VerificationValidationSession6Page() {
+  return (
+    <section className="s4-page s6-page" aria-labelledby="session6-title">
+      <Link className="back-link" to={verificationValidationRoutes.basePath}>← Kembali ke course roadmap</Link>
+      <header className="content-card s4-hero">
+        <div className="s4-hero-copy"><div className="eyebrow">SESSION 6 · PRAKTIKUM</div><h1 id="session6-title">Menjalankan Test Activities dengan Tool Support dan Defect Tracking pada Techlith Lab Inventory</h1><p>Execute candidate builds, capture evidence, investigate failures, then retest and run regression.</p></div>
+        <div className="s4-output"><strong>Output mahasiswa</strong><span>Execution records, evidence, traceable defect report, retest and regression results, and a release test summary.</span></div>
+      </header>
+
+      <section className="content-card s4-panel"><div className="eyebrow">CARRY-FORWARD · SESSION 5</div><h2>Gunakan suite dan work products yang sudah disiapkan</h2><p>Bawa improved tests, reusable tests/assets, completed work products, dan evidence discipline dari Session 5 ke workflow release-candidate ini. Hubungkan setiap hasil dengan requirement, test ID, release, dan evidence.</p></section>
+
+      <section className="content-card s4-panel"><div className="eyebrow">ISOLATED CLASSROOM ENVIRONMENT</div><h2>Controlled release-candidate exercise</h2><p>Session 6 menggunakan source terpisah di <code>classroom/verification-validation/session-6-source/</code>. Project ini deterministic, in-memory, dan mandiri; tidak mengubah Main Application maupun source Session 3 atau Session 5.</p><p>RC1 adalah candidate build yang harus diuji berdasarkan requirement dan official execution suite. Jangan mengasumsikan semua test akan PASS.</p><div className="s6-downloads"><a className="s4-download-link" href="/downloads/verification-validation/session-6-source.zip" download>Download Session 6 source ZIP →</a><a className="s4-download-link" href="/downloads/verification-validation/session-6-work-products.zip" download>Download blank work-products ZIP →</a></div></section>
+
+      <section className="content-card s4-panel"><div className="eyebrow">REQUIREMENT-BASED EXECUTION SET</div><h2>Planned scenarios and expected behavior</h2><p>Use the canonical requirements and expected results to evaluate the observed candidate behavior. Record actual result and evidence separately after each run.</p><div className="s6-table-wrap"><table className="s6-table"><thead><tr><th>Test ID</th><th>Requirement</th><th>Unit</th><th>Stock</th><th>Outbound</th><th>Expected</th></tr></thead><tbody>{scenarios.map(([id, requirement, unit, stock, amount, expected]) => <tr key={id}><td data-label="Test ID"><code>{id}</code></td><td data-label="Requirement">{requirement}</td><td data-label="Unit">{unit}</td><td data-label="Stock">{stock}</td><td data-label="Outbound">{amount}</td><td data-label="Expected">{expected}</td></tr>)}</tbody></table></div><p className="s4-muted">Expected behavior follows REQ-INV-001–REQ-INV-006. The table contains planned results only; write actual observations and execution status in your own record.</p></section>
+
+      <section className="content-card s4-panel"><div className="eyebrow">EXECUTION WORKFLOW</div><h2>Run RC1 before reviewing the next candidate</h2><ol className="s6-steps"><li>Install the standalone project with <code>npm ci</code>.</li><li>Run <code>npm run test:rc1</code> and save the command output and release identity.</li><li>Compare each actual result with its requirement-based expected result; record evidence and investigate any failure.</li><li>Complete the failure investigation and defect report before running the next candidate.</li><li>Then run <code>npm run test:rc2</code>, followed by focused retest and regression.</li><li>Summarize residual risk, evidence, and recommendation in the test summary.</li></ol><div className="s6-command-list">{commands.map((command) => <code key={command}>{command}</code>)}</div><p className="s4-muted">A failed test is an observed mismatch; it does not prove a root cause. Make defect records traceable and reproducible. Retest checks the specific failed behavior; regression checks related behavior that could be affected.</p></section>
+
+      <section className="content-card s4-panel"><div className="eyebrow">FAILURE INVESTIGATION &amp; DEFECT TRACKING</div><h2>Separate observation from explanation</h2><div className="s4-task-grid"><article><h3>Capture failure evidence</h3><p>Record release, test ID, requirement, input, expected and actual behavior, repeatable steps, and evidence reference.</p></article><article><h3>Investigate with care</h3><p>Describe the impact hypothesis and open questions. Treat a root-cause statement as a claim that needs supporting evidence.</p></article><article><h3>Create a traceable record</h3><p>Connect requirement ↔ test ↔ defect ↔ evidence. Add severity, priority, status, and fix reference only when supported by your investigation.</p></article><article><h3>Keep the report honest</h3><p>Leave unsupported root cause and fix details blank. Do not convert an expected result or a test failure into an unobserved actual result.</p></article></div></section>
+
+      <section className="content-card s4-panel"><div className="eyebrow">EVIDENCE CAPTURE</div><h2>Make each run reproducible</h2><ul><li>Record the exact command and release candidate.</li><li>Preserve test ID, requirement, precondition, input, expected result, and observed actual result.</li><li>Assign evidence IDs such as <code>EV-INV-S6-001</code>; reference logs or screenshots without editing the observation.</li><li>Keep the execution record, defect report, retest/regression record, and mini RTM in sync.</li><li>Use only results from runs you actually executed; note environment or infrastructure errors separately.</li></ul></section>
+
+      <section className="content-card s4-panel"><div className="eyebrow">RETEST &amp; REGRESSION</div><h2>Verify the reported behavior, then surrounding behavior</h2><p>After the first release-candidate run and failure investigation are recorded, execute the supplied follow-up candidate. Retest the related case against its expected requirement behavior, then run the regression set covering integer pcs, fractional pcs, fractional meter, zero, and negative quantities.</p><p>Update the defect status only from observed retest evidence. A passing retest alone does not replace regression or the overall test summary.</p></section>
+
+      <section className="content-card s4-panel"><div className="eyebrow">WORK PRODUCTS</div><h2>Maintain the record across activities</h2><ul>{products.map((product) => <li key={product}>{product}</li>)}</ul><p>Execution template includes planned inputs and expected outcomes; actual, result, evidence ID, and notes remain yours to record. Other templates are blank apart from headings and the permitted defect ID placeholder.</p><a className="s4-download-link" href="/downloads/verification-validation/session-6-work-products.zip" download>Download the six blank work products →</a></section>
+
+      <section className="content-card s4-panel s4-carry-forward"><div className="eyebrow">CARRY-FORWARD TO SESSION 7</div><h2>Bring evidence and traceability forward</h2><p>Keep the improved suite from Session 5 together with Session 6 execution evidence, investigation, defect record, retest, regression, and summary. These become input for final testing documentation and presentation in Session 7.</p></section>
+
+      <section className="content-card s4-panel"><div className="eyebrow">TROUBLESHOOTING</div><h2>Separate tool problems from product observations</h2><ul><li>Run commands from the Session 6 source folder and use Node.js LTS with npm.</li><li>If the runner reports an infrastructure error or missing result file, resolve the setup issue before recording a test outcome.</li><li>Use named scripts to select the intended release and test phase.</li><li>If output is unexpected, retain the raw command output and repeat the same input before drawing conclusions.</li></ul></section>
+    </section>
+  )
+}
