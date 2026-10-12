@@ -24,7 +24,7 @@ export const verificationValidationCourse = {
       number: 2,
       title: 'Merancang Test Berbasis Objective, Experience, dan Input Domain pada Techlith Lab Inventory',
       deliveryModel: 'Mini Case',
-      status: 'planned',
+      status: 'available',
     },
     {
       number: 3,

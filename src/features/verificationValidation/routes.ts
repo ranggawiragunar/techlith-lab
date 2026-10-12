@@ -1,8 +1,22 @@
 import { verificationValidationCourse } from './courseConfig'
 
+const sessionPaths = {
+  1: `${verificationValidationCourse.baseRoute}/session-1`,
+  2: `${verificationValidationCourse.baseRoute}/session-2`,
+} as const
+
+const sessionNestedPaths = {
+  1: sessionPaths[1].slice('/admin/'.length),
+  2: sessionPaths[2].slice('/admin/'.length),
+} as const
+
 export const verificationValidationRoutes = {
   basePath: verificationValidationCourse.baseRoute,
   nestedPath: verificationValidationCourse.baseRoute.slice('/admin/'.length),
-  session1Path: `${verificationValidationCourse.baseRoute}/session-1`,
-  session1NestedPath: `${verificationValidationCourse.baseRoute.slice('/admin/'.length)}/session-1`,
+  sessionPaths,
+  sessionNestedPaths,
 } as const
+
+export function getVerificationValidationSessionPath(sessionNumber: number): string | undefined {
+  return sessionPaths[sessionNumber as keyof typeof sessionPaths]
+}
