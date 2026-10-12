@@ -42,7 +42,7 @@ export const verificationValidationCourse = {
       number: 5,
       title: 'Mengevaluasi Test Suite dengan Coverage, Mutation, dan Work Products pada Techlith Lab Inventory',
       deliveryModel: 'Praktikum',
-      status: 'planned',
+      status: 'available',
     },
     {
       number: 6,
