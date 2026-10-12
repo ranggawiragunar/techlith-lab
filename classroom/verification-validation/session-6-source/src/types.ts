@@ -3,6 +3,7 @@ export type InventoryUnit = 'pcs' | 'unit' | 'meter' | string
 
 export interface InventoryItem {
   code: string
+  name: string
   unit: InventoryUnit
   stock: number
 }

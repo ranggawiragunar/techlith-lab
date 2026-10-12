@@ -1,4 +1,5 @@
 import type { InventoryItem } from '../src/types'
+import { meterFixture, pcsFixture } from '../fixtures/inventory'
 
 export interface ExecutionScenario {
   id: string
@@ -9,7 +10,7 @@ export interface ExecutionScenario {
   nextStock: number
 }
 
-const item = (unit: string, stock = 10): InventoryItem => ({ code: `ITM-${unit.toUpperCase()}`, unit, stock })
+const item = (unit: string): InventoryItem => ({ ...(unit === 'pcs' ? pcsFixture : meterFixture) })
 
 export const scenarios: ExecutionScenario[] = [
   { id: 'TC-INV-S6-001', requirement: 'REQ-INV-003 / REQ-INV-006', item: item('pcs'), amount: 1, accepted: true, nextStock: 9 },

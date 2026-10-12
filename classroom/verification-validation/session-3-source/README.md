@@ -1,4 +1,4 @@
-# Techlith Lab — Verification & Validation Session 3 Reference Source
+# Techlith Lab — Session 3 Inventory Classroom
 
 This standalone project is a small **reference classroom rule set** aligned with the canonical inventory requirements. It is **not a byte-for-byte snapshot of the Main Techlith Lab application**. The two environments have different roles: Sessions 1–2 use the Main Application; Session 3 studies this isolated source project. The Session 1 over-stock observation does not define this reference rule: outbound quantity here follows the requirement and cannot exceed current stock. This is not presented as a “fixed version of the bug.”
 
@@ -12,14 +12,14 @@ No database, cloud service, Java, Python, Docker, or Firebase Emulator is needed
 ## Install and run
 
 ```bash
-npm ci
-npm test
-npm run test:watch
+npm install
+npm run test
 npm run coverage
+npm run mutation -- --list
 npm run build
 ```
 
-Vitest is configured to pass when no student test files exist yet. This checks that the test command starts; it does not test inventory requirements for you. Coverage is a feedback tool for exploring your own tests. Session 3 has no normalized percentage target.
+`npm ci` is also available when you want an install exactly from the lockfile. The official starter includes a small, deliberately incomplete four-case baseline. It is an orientation point, not a complete requirement suite. Add your own tests under `tests/`; active `npm run test`, `coverage`, and `mutation` include those tests. Session 3 has no normalized percentage target.
 
 To view the small reference page locally:
 
@@ -45,13 +45,13 @@ Read the small rule functions and write tests for selected canonical requirement
 
 ### Task B — Fault-based
 
-1. Compare the reference rules with controlled mutant M01–M04.
+1. List the controlled variants with `npm run mutation -- --list`.
 2. Design a test that distinguishes a mutant from the reference behavior.
-3. Run your test against the reference implementation.
-4. Run or adapt it against one mutant at a time in a controlled way.
-5. Record which differences your own tests detect and the evidence you observed.
+3. Run your suite against one variant with `npm run mutation -- --mutant M02` (replace M02 with a listed ID).
+4. Run all variants with `npm run mutation -- --summary` and record the observed output.
+5. Mutation status comes from Vitest execution of your current tests; infrastructure errors are reported separately.
 
-The starter does not automate mutation execution or provide mutant outcomes.
+The starter reports outcomes from actual test runs; it does not prefill a normalized outcome or score.
 
 ### Task C — Usage-based
 
@@ -69,10 +69,13 @@ Run your tests and coverage command. Record commands, observed output, test IDs,
 
 - `src/types.ts` — inventory, movement, state, and usage types.
 - `src/quantityRules.ts` — positive quantity, decimal precision, and unit domain rules.
-- `src/inventoryRules.ts` — reference outbound decision and movement result.
-- `src/inventoryState.ts` — in-memory archive/restore transitions and movement eligibility.
-- `src/usageProfile.ts` — classroom operational profile.
+- `src/inventoryRules.ts` — `validateOutbound(stock, amount, unit, isActive?)` and the compatible item-based `applyOutbound(...)` API.
+- `src/inventoryState.ts` / `src/itemState.ts` — in-memory archive/restore transitions and movement eligibility, with tutorial-compatible exports.
+- `src/usageProfile.ts` / `src/operationalProfile.ts` — classroom operational profile and tutorial-compatible exports.
 - `src/mutants/M01.ts`–`M04.ts` — isolated controlled rule changes for fault-based reasoning.
+- `mutants/manifest.json` — mutant IDs and descriptions without outcomes.
+- `tests/inventoryRules.baseline.test.ts` — four intentionally incomplete official starter cases.
+- `scripts/run-mutation.mjs` — stable mutation command interface.
 - `src/main.ts` — small source orientation page; this is not a duplicate inventory UI.
 - `tests/README.md` — student-owned test workflow.
 
