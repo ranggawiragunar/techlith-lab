@@ -54,7 +54,7 @@ export const verificationValidationCourse = {
       number: 7,
       title: 'Menyusun Software Testing Document dan Ringkasan Presentasi pada Techlith Lab Inventory',
       deliveryModel: 'Praktikum',
-      status: 'planned',
+      status: 'available',
     },
   ] satisfies CourseSession[],
 } as const

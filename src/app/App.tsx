@@ -1,3 +1,4 @@
+import { lazy, Suspense } from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import { ProtectedRoute } from './ProtectedRoute'
 import { LoginPage } from '../pages/LoginPage'
@@ -14,6 +15,12 @@ import { VerificationValidationSession3Page } from '../features/verificationVali
 import { VerificationValidationSession4Page } from '../features/verificationValidation/pages/VerificationValidationSession4Page'
 import { VerificationValidationSession5Page } from '../features/verificationValidation/pages/VerificationValidationSession5Page'
 import { VerificationValidationSession6Page } from '../features/verificationValidation/pages/VerificationValidationSession6Page'
+
+const VerificationValidationSession7Page = lazy(() =>
+  import('../features/verificationValidation/pages/VerificationValidationSession7Page').then((module) => ({
+    default: module.VerificationValidationSession7Page,
+  })),
+)
 
 export function App() {
   return (
@@ -36,6 +43,7 @@ export function App() {
           <Route path={verificationValidationRoutes.sessionNestedPaths[4]} element={<VerificationValidationSession4Page />} />
           <Route path={verificationValidationRoutes.sessionNestedPaths[5]} element={<VerificationValidationSession5Page />} />
           <Route path={verificationValidationRoutes.sessionNestedPaths[6]} element={<VerificationValidationSession6Page />} />
+          <Route path={verificationValidationRoutes.sessionNestedPaths[7]} element={<Suspense fallback={<div className="content-card">Loading Session 7…</div>}><VerificationValidationSession7Page /></Suspense>} />
         </Route>
       </Route>
       <Route path="*" element={<Navigate to="/admin/dashboard" replace />} />

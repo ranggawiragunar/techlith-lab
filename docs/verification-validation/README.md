@@ -61,3 +61,7 @@ Session 5 is available at `/admin/classroom/verification-validation/session-5`. 
 ## Session 6
 
 Session 6 is available at `/admin/classroom/verification-validation/session-6`, with isolated source at `classroom/verification-validation/session-6-source/` and student materials under `public/downloads/verification-validation/`. The student workflow executes RC1 before reviewing RC2, then records failure evidence, creates a traceable defect report, retests, runs regression, and summarizes. Six requirement-based scenarios use REQ-INV-001–006. Student-facing materials do not reveal the pre-execution outcome or root cause. All release behavior and tooling are isolated; Main Application and root dependencies remain unchanged.
+
+## Session 7
+
+Session 7 is available at `/admin/classroom/verification-validation/session-7`. The documentation-only workspace is `classroom/verification-validation/session-7-workspace/`; the student download is `public/downloads/verification-validation/session-7-final-qa-pack.zip`. It integrates Session 1–6 student work into a Final Software Testing Document and Final QA Pack. Templates preserve canonical REQ/TC/DEF/EV/MET identifiers and leave student-owned actuals and conclusions blank. Session 4 metrics are labeled normalized classroom references; Session 5/6 actuals must come from student evidence. No new execution engine, backend, or root dependency is added. Sessions 1–7 are available, completing the track flow from test objectives through final documentation and presentation.
