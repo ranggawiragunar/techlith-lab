@@ -1,0 +1,7 @@
+Requirement ID,Requirement Summary,Related Test / Scenario IDs,Evidence IDs,Defect IDs,Retest / Regression Reference,Status,Notes,Suggested Reference
+REQ-INV-001,Outbound quantity > 0.,,,,,,,Consider positive/minimum-valid evidence from Session 2/5 and zero/negative rejection evidence from Session 6.
+REQ-INV-002,Outbound quantity <= current stock; exact-stock valid.,,,,,,,"Consider exact-stock, over-stock, and stock-consistency evidence."
+REQ-INV-003,Whole-number units such as pcs / unit only accept integers.,,,,,,,Consider integer/fractional pcs evidence and Session 6 controlled release-candidate work.
+REQ-INV-004,Fractional units such as meter allow precision <= 3 decimals.,,,,,,,Consider fractional meter and 3-vs-4 decimal precision evidence.
+REQ-INV-005,ARCHIVED rejects new movement; existing history remains available.,,,,,,,"Include ARCHIVED rejection, restore → ACTIVE, history persistence/availability, and cross-state evidence."
+REQ-INV-006,Successful movement keeps prevAmount / amount / nextAmount consistent.,,,,,,,Include successful movement prev/amount/next consistency evidence.

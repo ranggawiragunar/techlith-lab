@@ -1,0 +1,7 @@
+Metric ID,Session,Metric,Baseline / Reference,Observed Value,Source / Command,Interpretation,Limitation,Evidence ID
+MET-INV-S4-001,Session 4,Statement Coverage,Normalized classroom evidence = 88%,,,,,
+MET-INV-S4-002,Session 4,Branch Coverage,Normalized classroom evidence = 72%,,,,,
+MET-INV-S4-003,Session 4,Mutation Score,Normalized classroom evidence = 50%,,,,,
+MET-INV-S5-001,Session 5,Scoped Statement Coverage Before / After,"Target, not prefilled result: 100% scoped statements",,,,,
+MET-INV-S5-002,Session 5,Scoped Branch Coverage Before / After,"Target, not prefilled result: 100% scoped branches",,,,,
+MET-INV-S5-003,Session 5,Controlled Mutation Before / After,"Target, not prefilled result: 4/4 controlled mutants",,,,,

@@ -42,3 +42,12 @@ The standalone source contains no answer suite. It bundles blank planning, desig
 - **Student downloads:** `public/downloads/verification-validation/session-6-source.zip` and `session-6-work-products.zip`
 
 Session 6 is a deterministic, in-memory controlled release-candidate exercise with named execution, retest, and regression commands. It uses the canonical REQ-INV-001–006 and six scenario IDs, plus blank execution and defect-tracking work products. Students run RC1 and record evidence before reviewing the follow-up candidate. The candidate source is separate from Main Application and earlier classroom projects.
+
+## Session 7
+
+- **Status:** Available · Praktikum
+- **Portal route:** `/admin/classroom/verification-validation/session-7`
+- **Documentation workspace:** `classroom/verification-validation/session-7-workspace/`
+- **Student download:** `public/downloads/verification-validation/session-7-final-qa-pack.zip`
+
+Session 7 is the final documentation practicum. Students integrate their own Session 1–6 artifacts into a Final Software Testing Document and Final QA Pack, maintaining canonical traceability IDs and separating normalized classroom references from observed results. The workspace contains blank report/register templates and a presentation outline; it adds no test engine or backend. Sessions 1–7 are available.
