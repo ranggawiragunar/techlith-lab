@@ -1,0 +1,7 @@
+Run ID,Release,Test ID,Requirement,Precondition,Input,Expected,Actual,Result,Evidence ID,Notes
+Run 1,,TC-INV-S6-001,REQ-INV-003 / REQ-INV-006,"ACTIVE pcs item, stock 10",Outbound 1,"Accepted; next stock 9",,,,,
+Run 1,,TC-INV-S6-002,REQ-INV-003,"ACTIVE pcs item, stock 10",Outbound 1.5,"Rejected; stock unchanged",,,,,
+Run 1,,TC-INV-S6-003,REQ-INV-004 / REQ-INV-006,"ACTIVE meter item, stock 10",Outbound 1.5,"Accepted; next stock 8.5",,,,,
+Run 1,,TC-INV-S6-004,REQ-INV-001,"ACTIVE pcs item, stock 10",Outbound 0,"Rejected; stock unchanged",,,,,
+Run 1,,TC-INV-S6-005,REQ-INV-001,"ACTIVE pcs item, stock 10",Outbound -1,"Rejected; stock unchanged",,,,,
+Run 1,,TC-INV-S6-006,REQ-INV-002,"ACTIVE pcs item, stock 10",Outbound 11,"Rejected; stock unchanged",,,,,

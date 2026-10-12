@@ -57,3 +57,7 @@ Do not merge this branch with `software-testing` as an implementation shortcut.
 ## Session 5
 
 Session 5 is available at `/admin/classroom/verification-validation/session-5`. Its isolated source is `classroom/verification-validation/session-5-source/`, derived from the Session 3 reference rules and explicitly not a byte-for-byte Main Application snapshot. The official baseline suite is designed for 88% scoped statement, 72% scoped branch, and 50% mutation (M01/M03 killed; M02/M04 survived). V8 supplies raw and machine-readable coverage; the standalone scoped calculation documents its source scope. Students add tests toward 100%/100%/4-of-4, using blank work products and evidence for state-transition gaps. The Session 6 carry-forward is generic. No Main Application behavior or root dependency changes are part of this session.
+
+## Session 6
+
+Session 6 is available at `/admin/classroom/verification-validation/session-6`, with isolated source at `classroom/verification-validation/session-6-source/` and student materials under `public/downloads/verification-validation/`. The student workflow executes RC1 before reviewing RC2, then records failure evidence, creates a traceable defect report, retests, runs regression, and summarizes. Six requirement-based scenarios use REQ-INV-001–006. Student-facing materials do not reveal the pre-execution outcome or root cause. All release behavior and tooling are isolated; Main Application and root dependencies remain unchanged.
