@@ -1,5 +1,5 @@
 {
-  "name": "techlith-session-5-suite-evaluation",
+  "name": "session-5-inventory-evaluation",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -9,7 +9,10 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "coverage": "vitest run --coverage && node scripts/scoped-coverage.mjs",
-    "mutation": "node scripts/run-mutation.mjs"
+    "mutation": "node scripts/run-mutation.mjs",
+    "test:baseline": "vitest run tests/baseline",
+    "coverage:baseline": "vitest run tests/baseline --coverage && node scripts/scoped-coverage.mjs",
+    "mutation:baseline": "node scripts/run-mutation.mjs --baseline"
   },
   "devDependencies": {
     "@vitest/coverage-v8": "^5.0.3",

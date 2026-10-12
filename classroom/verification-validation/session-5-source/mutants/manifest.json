@@ -1,0 +1,8 @@
+{
+  "mutants": [
+    { "id": "M01", "description": "Changes the positive-quantity boundary so zero may pass." },
+    { "id": "M02", "description": "Changes the stock comparison so exact-stock may be rejected." },
+    { "id": "M03", "description": "Bypasses whole-number unit validation." },
+    { "id": "M04", "description": "Allows a fourth decimal place." }
+  ]
+}
