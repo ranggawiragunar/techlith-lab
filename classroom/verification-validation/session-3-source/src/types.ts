@@ -16,6 +16,14 @@ export interface MovementResult {
   reason?: string
 }
 
+export type OutboundResult =
+  | { accepted: true; nextStock: number; reason: 'OK' }
+  | {
+      accepted: false
+      nextStock: number
+      reason: 'ARCHIVED_ITEM' | 'INVALID_QUANTITY' | 'PRECISION_EXCEEDED' | 'WHOLE_UNIT_REQUIRED' | 'INSUFFICIENT_STOCK'
+    }
+
 export interface QuantityValidation {
   valid: boolean
   reason?: string
